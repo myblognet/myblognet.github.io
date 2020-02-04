@@ -155,121 +155,6 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-CentOS上安装配置Python" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/02/04/CentOS%E4%B8%8A%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AEPython/">CentOS上安装配置Python</a>
-    </h1>
-  
-
-        
-        <a href="/2020/02/04/CentOS%E4%B8%8A%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AEPython/" class="archive-article-date">
-  	<time datetime="2020-02-04T08:23:33.141Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-04</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="CentOS上安装配置Python3-7"><a href="#CentOS上安装配置Python3-7" class="headerlink" title="CentOS上安装配置Python3.7"></a>CentOS上安装配置Python3.7</h1><ol>
-<li></li>
-</ol>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gcc make</span><br></pre></td></tr></table></figure>
-
-<ol start="2">
-<li><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install libffi-devel -y</span><br></pre></td></tr></table></figure></li>
-<li></li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https://www.python.org/ftp/python/3.7.0/Python-3.7.0.tgz</span><br></pre></td></tr></table></figure>
-
-<ol start="4">
-<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1 		tar -zxvf Python-3.7.0.tgz</span><br><span class="line">2  		 cd Python-3.7.0</span><br><span class="line">3		 ./configure</span><br><span class="line">4		  make&amp;&amp;make install</span><br></pre></td></tr></table></figure></li>
-<li></li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">mv /usr/bin/python /usr/bin/python.bak</span><br><span class="line">ln -s /usr/local/bin/python3 /usr/bin/python</span><br><span class="line">mv /usr/bin/pip /usr/bin/pip.bak</span><br><span class="line">ln -s /usr/local/bin/pip3 /usr/bin/pip</span><br></pre></td></tr></table></figure>
-<ol start="6">
-<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">验证python，如果显示的版本号是3.7.0，就代表安装成功了</span><br><span class="line">pyton</span><br></pre></td></tr></table></figure></li>
-<li></li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">验证pip，看看pip的版本号是不是10.0.1，以及最后括号里是不是3.7</span><br><span class="line">pip -V</span><br></pre></td></tr></table></figure>
-<ol start="8">
-<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /usr/libexec/urlgrabber-ext-down</span><br></pre></td></tr></table></figure></li>
-<li></li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">打开以后，找到一个/usr/bin/python的，后面加上2.7就可以了！也就是/usr/bin/python2.7</span><br></pre></td></tr></table></figure>
-<ol start="10">
-<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /usr/bin/yum</span><br></pre></td></tr></table></figure></li>
-<li><p>​                             <a href="https://blog.csdn.net/qq_36288025/article/details/82534508" target="_blank" rel="noopener">转载地址</a></p>
-</li>
-</ol>
-<h1 id="Centos8无法安装screen的解决方法：使用epel安装screen"><a href="#Centos8无法安装screen的解决方法：使用epel安装screen" class="headerlink" title="Centos8无法安装screen的解决方法：使用epel安装screen"></a>Centos8无法安装screen的解决方法：使用epel安装screen</h1><p>Centos8无法安装screen的解决方法：使用epel安装screen</p>
-<p>centos的最新版centos8，但是在安装screen的时候，却安装不了，提示：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">No match for argument: screen</span><br></pre></td></tr></table></figure>
-
-<p>本来以为是yum源里没有screen，还换到了阿里云的源，却依然不能安装。将系统换到centos7，却可以直接正常安装screen。</p>
-<p>后来发现Centos8安装screen需要使用epel来安装，安装epel后，再安装screen，解决centos8无法安装screen的问题。</p>
-<p>1、安装epel</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install epel-release</span><br></pre></td></tr></table></figure>
-
-<p>2、安装screen</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install screen</span><br></pre></td></tr></table></figure>
-
-<p>可以看到centos8已经正常安装并可以使用screnn了。</p>
-<h1 id="screen使用教程"><a href="#screen使用教程" class="headerlink" title="screen使用教程"></a>screen使用教程</h1><p>1.创建会话窗口</p>
-<p>　　　　screen -S bilibili</p>
-<p>　　2.在会话窗口中执行命令</p>
-<p>　　　　python run.py<br>　　3.此时可以关闭ssh窗口或离开会话窗口了</p>
-<p>　　　　离开会话窗口是先执行ctrl + a ,后ctrl + d</p>
-<p>　　4.重新登录ssh查看bilibili窗口运行状态</p>
-<p>　　　　screen -r bilibili</p>
-<p>进入目录的时候ls不出来试一试</p>
-<p>cd  /</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/02/04/CentOS%E4%B8%8A%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AEPython/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
     <article id="post-英语四级之写作之最后的挣扎" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -643,6 +528,132 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2019/11/30/%E8%8B%B1%E8%AF%AD%E5%9B%9B%E7%BA%A7%E5%A4%A7%E4%BD%9C%E6%88%98%E5%BC%80%E5%A7%8B%E4%BA%86/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-CentOS上安装配置Python" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/11/23/CentOS%E4%B8%8A%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AEPython/">CentOS上安装配置Python3.7</a>
+    </h1>
+  
+
+        
+        <a href="/2019/11/23/CentOS%E4%B8%8A%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AEPython/" class="archive-article-date">
+  	<time datetime="2019-11-23T02:52:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-23</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="CentOS上安装配置Python3-7"><a href="#CentOS上安装配置Python3-7" class="headerlink" title="CentOS上安装配置Python3.7"></a>CentOS上安装配置Python3.7</h1><ol>
+<li></li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gcc make</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install libffi-devel -y</span><br></pre></td></tr></table></figure></li>
+<li></li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https://www.python.org/ftp/python/3.7.0/Python-3.7.0.tgz</span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1 		tar -zxvf Python-3.7.0.tgz</span><br><span class="line">2  		 cd Python-3.7.0</span><br><span class="line">3		 ./configure</span><br><span class="line">4		  make&amp;&amp;make install</span><br></pre></td></tr></table></figure></li>
+<li></li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">mv /usr/bin/python /usr/bin/python.bak</span><br><span class="line">ln -s /usr/local/bin/python3 /usr/bin/python</span><br><span class="line">mv /usr/bin/pip /usr/bin/pip.bak</span><br><span class="line">ln -s /usr/local/bin/pip3 /usr/bin/pip</span><br></pre></td></tr></table></figure>
+<ol start="6">
+<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">验证python，如果显示的版本号是3.7.0，就代表安装成功了</span><br><span class="line">pyton</span><br></pre></td></tr></table></figure></li>
+<li></li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">验证pip，看看pip的版本号是不是10.0.1，以及最后括号里是不是3.7</span><br><span class="line">pip -V</span><br></pre></td></tr></table></figure>
+<ol start="8">
+<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /usr/libexec/urlgrabber-ext-down</span><br></pre></td></tr></table></figure></li>
+<li></li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">打开以后，找到一个/usr/bin/python的，后面加上2.7就可以了！也就是/usr/bin/python2.7</span><br></pre></td></tr></table></figure>
+<ol start="10">
+<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /usr/bin/yum</span><br></pre></td></tr></table></figure></li>
+<li><p>​                             <a href="https://blog.csdn.net/qq_36288025/article/details/82534508" target="_blank" rel="noopener">转载地址</a></p>
+</li>
+</ol>
+<h1 id="Centos8无法安装screen的解决方法：使用epel安装screen"><a href="#Centos8无法安装screen的解决方法：使用epel安装screen" class="headerlink" title="Centos8无法安装screen的解决方法：使用epel安装screen"></a>Centos8无法安装screen的解决方法：使用epel安装screen</h1><p>Centos8无法安装screen的解决方法：使用epel安装screen</p>
+<p>centos的最新版centos8，但是在安装screen的时候，却安装不了，提示：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">No match for argument: screen</span><br></pre></td></tr></table></figure>
+
+<p>本来以为是yum源里没有screen，还换到了阿里云的源，却依然不能安装。将系统换到centos7，却可以直接正常安装screen。</p>
+<p>后来发现Centos8安装screen需要使用epel来安装，安装epel后，再安装screen，解决centos8无法安装screen的问题。</p>
+<p>1、安装epel</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install epel-release</span><br></pre></td></tr></table></figure>
+
+<p>2、安装screen</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install screen</span><br></pre></td></tr></table></figure>
+
+<p>可以看到centos8已经正常安装并可以使用screnn了。</p>
+<h1 id="screen使用教程"><a href="#screen使用教程" class="headerlink" title="screen使用教程"></a>screen使用教程</h1><p>1.创建会话窗口</p>
+<p>　　　　screen -S bilibili</p>
+<p>　　2.在会话窗口中执行命令</p>
+<p>　　　　python run.py<br>　　3.此时可以关闭ssh窗口或离开会话窗口了</p>
+<p>　　　　离开会话窗口是先执行ctrl + a ,后ctrl + d</p>
+<p>　　4.重新登录ssh查看bilibili窗口运行状态</p>
+<p>　　　　screen -r bilibili</p>
+<p>进入目录的时候ls不出来试一试</p>
+<p>cd  /</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color2">centos</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/11/23/CentOS%E4%B8%8A%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AEPython/">展开全文 >></a>
         </p>
       
 
@@ -1088,6 +1099,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color2">centos</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color5">hexo</a>
               </li>
              
@@ -1096,11 +1111,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color5">英语四级   写作</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color5">绘画软件</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color5">绘画软件</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color5">英语四级   写作</a>
               </li>
              
               <li class="article-tag-list-item">
