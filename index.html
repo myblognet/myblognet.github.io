@@ -589,7 +589,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https://www.python.org/ftp/python/3.7.0/Python-3.7.0.tgz</span><br></pre></td></tr></table></figure>
 
 <ol start="4">
-<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">1 		tar -zxvf Python-3.7.0.tgz</span><br><span class="line">2  		 cd Python-3.7.0</span><br><span class="line">3		 ./configure</span><br><span class="line">4		  make&amp;&amp;make install</span><br></pre></td></tr></table></figure></li>
+<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf Python-3.7.0.tgz</span><br><span class="line"> cd Python-3.7.0</span><br><span class="line">./configure</span><br><span class="line"> make&amp;&amp;make install</span><br></pre></td></tr></table></figure></li>
 <li></li>
 </ol>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">mv /usr/bin/python /usr/bin/python.bak</span><br><span class="line">ln -s /usr/local/bin/python3 /usr/bin/python</span><br><span class="line">mv /usr/bin/pip /usr/bin/pip.bak</span><br><span class="line">ln -s /usr/local/bin/pip3 /usr/bin/pip</span><br></pre></td></tr></table></figure>
