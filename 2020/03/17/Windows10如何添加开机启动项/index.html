@@ -6,17 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>CentOS上安装配置Python3.7 | mytools</title>
+  <title>Windows10如何添加开机启动项 | mytools</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="CentOS上安装配置Python3.7   1yum install zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gcc make">
-<meta name="keywords" content="centos">
+  <meta name="description" content="win+R键在“运行”程序中输入“shell:startup”即可进入开机启动文件夹。 此时开机启动文件夹中内容为空。">
+<meta name="keywords" content="Windows">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CentOS上安装配置Python3.7">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;23&#x2F;CentOS%E4%B8%8A%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AEPython&#x2F;index.html">
+<meta property="og:title" content="Windows10如何添加开机启动项">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;03&#x2F;17&#x2F;Windows10%E5%A6%82%E4%BD%95%E6%B7%BB%E5%8A%A0%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8%E9%A1%B9&#x2F;index.html">
 <meta property="og:site_name" content="mytools">
-<meta property="og:description" content="CentOS上安装配置Python3.7   1yum install zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gcc make">
+<meta property="og:description" content="win+R键在“运行”程序中输入“shell:startup”即可进入开机启动文件夹。 此时开机启动文件夹中内容为空。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-02-25T04:00:15.516Z">
+<meta property="og:updated_time" content="2020-03-17T08:24:54.852Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="mytools" type="application/atom+xml">
@@ -157,79 +157,33 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-CentOS上安装配置Python" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Windows10如何添加开机启动项" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      CentOS上安装配置Python3.7
+      Windows10如何添加开机启动项
     </h1>
   
 
         
-        <a href="/2019/11/23/CentOS%E4%B8%8A%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AEPython/" class="archive-article-date">
-  	<time datetime="2019-11-23T02:52:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-23</time>
+        <a href="/2020/03/17/Windows10%E5%A6%82%E4%BD%95%E6%B7%BB%E5%8A%A0%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8%E9%A1%B9/" class="archive-article-date">
+  	<time datetime="2020-03-17T08:21:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-17</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="CentOS上安装配置Python3-7"><a href="#CentOS上安装配置Python3-7" class="headerlink" title="CentOS上安装配置Python3.7"></a>CentOS上安装配置Python3.7</h1><ol>
-<li></li>
+        <ol>
+<li>win+R键在“运行”程序中输入“<em>shell:startup</em>”即可进入开机启动文件夹。</li>
+<li>此时开机启动文件夹中内容为空。<a id="more"></a></li>
+<li>如果想要添加启动项，可以将软件快捷方式移入开机启动文件夹中。</li>
+<li>在任务管理器中查看是否成功添加开机启动项。</li>
+<li>如果想要删除开机启动项，在任务管理器中可以选中该程序，然后设置“禁用”即可。</li>
 </ol>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gcc make</span><br></pre></td></tr></table></figure>
-<a id="more"></a>
-<ol start="2">
-<li><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install libffi-devel -y</span><br></pre></td></tr></table></figure></li>
-<li></li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https://www.python.org/ftp/python/3.7.0/Python-3.7.0.tgz</span><br></pre></td></tr></table></figure>
-
-<ol start="4">
-<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf Python-3.7.0.tgz</span><br><span class="line"> cd Python-3.7.0</span><br><span class="line">./configure</span><br><span class="line"> make&amp;&amp;make install</span><br></pre></td></tr></table></figure></li>
-<li></li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">mv /usr/bin/python /usr/bin/python.bak</span><br><span class="line">ln -s /usr/local/bin/python3 /usr/bin/python</span><br><span class="line">mv /usr/bin/pip /usr/bin/pip.bak</span><br><span class="line">ln -s /usr/local/bin/pip3 /usr/bin/pip</span><br></pre></td></tr></table></figure>
-<ol start="6">
-<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">验证python，如果显示的版本号是3.7.0，就代表安装成功了</span><br><span class="line">pyton</span><br></pre></td></tr></table></figure></li>
-<li></li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">验证pip，看看pip的版本号是不是10.0.1，以及最后括号里是不是3.7</span><br><span class="line">pip -V</span><br></pre></td></tr></table></figure>
-<ol start="8">
-<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /usr/libexec/urlgrabber-ext-down</span><br></pre></td></tr></table></figure></li>
-<li></li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">打开以后，找到一个/usr/bin/python的，后面加上2.7就可以了！也就是/usr/bin/python2.7</span><br></pre></td></tr></table></figure>
-<ol start="10">
-<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /usr/bin/yum</span><br></pre></td></tr></table></figure></li>
-<li><p>​                             <a href="https://blog.csdn.net/qq_36288025/article/details/82534508" target="_blank" rel="noopener">转载地址</a></p>
-</li>
-</ol>
-<h1 id="Centos8无法安装screen的解决方法：使用epel安装screen"><a href="#Centos8无法安装screen的解决方法：使用epel安装screen" class="headerlink" title="Centos8无法安装screen的解决方法：使用epel安装screen"></a>Centos8无法安装screen的解决方法：使用epel安装screen</h1><p>Centos8无法安装screen的解决方法：使用epel安装screen</p>
-<p>centos的最新版centos8，但是在安装screen的时候，却安装不了，提示：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">No match for argument: screen</span><br></pre></td></tr></table></figure>
-
-<p>本来以为是yum源里没有screen，还换到了阿里云的源，却依然不能安装。将系统换到centos7，却可以直接正常安装screen。</p>
-<p>后来发现Centos8安装screen需要使用epel来安装，安装epel后，再安装screen，解决centos8无法安装screen的问题。</p>
-<p>1、安装epel</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install epel-release</span><br></pre></td></tr></table></figure>
-
-<p>2、安装screen</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install screen</span><br></pre></td></tr></table></figure>
-
-<p>可以看到centos8已经正常安装并可以使用screnn了。</p>
-<h1 id="screen使用教程"><a href="#screen使用教程" class="headerlink" title="screen使用教程"></a>screen使用教程</h1><p>1.创建会话窗口</p>
-<p>　　　　screen -S bilibili</p>
-<p>　　2.在会话窗口中执行命令</p>
-<p>　　　　python run.py<br>　　3.此时可以关闭ssh窗口或离开会话窗口了</p>
-<p>　　　　离开会话窗口是先执行ctrl + a ,后ctrl + d</p>
-<p>　　4.重新登录ssh查看bilibili窗口运行状态</p>
-<p>　　　　screen -r bilibili</p>
-<p>进入目录的时候ls不出来试一试</p>
-<p>cd  /</p>
 
       
 
@@ -274,7 +228,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color2">centos</a>
+        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color3">Windows</a>
         		</li>
       		
 		</ul>
@@ -330,7 +284,7 @@
     <a class="close js-modal-close" href="javascript:;" target="_blank" rel="noopener"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/11/23/CentOS%E4%B8%8A%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AEPython/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/03/17/Windows10%E5%A6%82%E4%BD%95%E6%B7%BB%E5%8A%A0%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8%E9%A1%B9/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -344,18 +298,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/02/25/java%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E4%B8%8Eeclipse%E5%AE%89%E8%A3%85/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          java环境配置与eclipse安装
-        
-      </div>
-    </a>
   
-  
-    <a href="/2019/11/23/hexo%E5%8D%9A%E5%AE%A2%E4%B8%AD%E5%BC%95%E7%94%A8B%E7%AB%99%E8%A7%86%E9%A2%91/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">hexo博客中引用B站视频</div>
+    <a href="/2020/03/05/heyper-v%E5%AE%89%E8%A3%85centos%E7%B3%BB%E7%BB%9F/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">heyper-v安装centos系统</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -415,7 +360,7 @@
 <script src="https://myblog.zfqhnmyjj.club/js/gitment.js"></script>
 <script>
 var gitment = new Gitment({
-  id: "http://yoursite.com/2019/11/23/CentOS%E4%B8%8A%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AEPython/",
+  id: "http://yoursite.com/2020/03/17/Windows10%E5%A6%82%E4%BD%95%E6%B7%BB%E5%8A%A0%E5%BC%80%E6%9C%BA%E5%90%AF%E5%8A%A8%E9%A1%B9/",
   owner: 'Mytoolsblog',
   repo: 'Mytoolsblog.github.io',
   oauth: {
